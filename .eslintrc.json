@@ -1,7 +1,7 @@
 {
   "extends": ["./node_modules/standard/eslintrc.json","next/core-web-vitals"],
   "overrides": [{
-    "files":["*.ts"],
+    "files":["*.ts","*.tsx"],
     "rules": {
       "no-undef": "off"
     }
