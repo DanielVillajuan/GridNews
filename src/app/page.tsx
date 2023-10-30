@@ -1,7 +1,14 @@
-export default function Home () {
+import Breadcrumbs from '@/components/Breadcrumbs'
+import NewsGrid from '@/components/NewsGrid'
+
+export default function Home (): JSX.Element {
   return (
-    <div>
-      <h1>Hola</h1>
+    <div id='wrap'>
+      <main>
+        <NewsGrid>
+          <Breadcrumbs />
+        </NewsGrid>
+      </main>
     </div>
   )
 }
