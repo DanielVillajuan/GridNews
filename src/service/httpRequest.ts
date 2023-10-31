@@ -3,8 +3,8 @@ export enum METHOD {
 }
 
 export class HttpRequest {
-  private readonly baseUrl: string = ''
-  constructor (baseURL: string = '') {
+  private readonly baseUrl: string 
+  constructor (baseURL: string) {
     this.baseUrl = baseURL
   }
 
@@ -29,4 +29,4 @@ export class HttpRequest {
 
 }
 
-export const http = new HttpRequest(process.env.API)
+export const http = new HttpRequest(process.env.API || "")
