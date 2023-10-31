@@ -8,7 +8,7 @@ export class HttpRequest {
     this.baseUrl = baseURL
   }
 
-  private async request<T> (method: METHOD, { endpoint, params, data }: { endpoint?: string, params?: RequestInit, data?: T }): Promise<T> {
+  private async request<T> (method: METHOD, { endpoint = '', params, data }: { endpoint?: string, params?: RequestInit, data?: T }): Promise<T> {
     const options: RequestInit = {
       ...params,
       method,
@@ -20,7 +20,7 @@ export class HttpRequest {
 
     const response = await fetch(this.baseUrl + endpoint, options)
     const results = await response.json() as Promise<T>
-    return results
+    return results    
   }
 
   async get<T> (endpoint?: string, params?: RequestInit): Promise<T> {
@@ -29,4 +29,4 @@ export class HttpRequest {
 
 }
 
-export const http = new HttpRequest(process.env.API || "")
+export const http = new HttpRequest(process.env.URL_API || "")
