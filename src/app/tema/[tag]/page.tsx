@@ -1,11 +1,9 @@
-import { TagParamType } from '@/types/tag'
+import { TagParamType } from '@/types/news'
 
 export default function Tag ({ params: { tag } }: TagParamType) {
-  console.log(tag)
-
   return (
-    <div>
-      <h1>TAg: {tag}</h1>
+    <div className='row'>
+      <h1>Contenido para esta categoria: {tag}</h1>
     </div>
   )
 }

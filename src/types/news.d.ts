@@ -25,3 +25,22 @@ export type NewType = {
     },
     website_url: string
 }
+
+export type TagParamType = {
+    params: {
+        tag: string
+    }
+}
+
+export type NewOfListProps = {
+    news: NewType[],
+    onlySubtype: string
+}
+
+export type NewsItemProps = {
+    item: NewType
+}
+
+export type BreadcrumbsProps = {
+  tags: TagType[]
+}

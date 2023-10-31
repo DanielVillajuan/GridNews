@@ -1,12 +1,11 @@
-export default function Breadcrumbs (): JSX.Element {
+import { BreadcrumbsProps, TagType } from '@/types/news'
+import Link from 'next/link'
+
+export default function Breadcrumbs ({ tags }: BreadcrumbsProps): JSX.Element {
   return (
     <div className='row'>
       <div className='cont_tags com-secondary-tag hlp-marginBottom-20'>
-        <a>Platos principales</a>
-        <a>Cerdo</a>
-        <a>Papas</a>
-        <a>Date un gustito</a>
-        <a>La familia</a>
+        {tags.map((t: TagType) => <Link href={`/tema/${t.slug}`} key={t.slug}>{t.text}</Link>)}
       </div>
     </div>
   )
