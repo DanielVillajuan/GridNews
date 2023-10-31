@@ -5,7 +5,7 @@ export default function NewsItem ({ item: { _id, display_date: displayDate, prom
   const dateParse = new Date(displayDate).toLocaleDateString(TOLOCALE, OPTIONS_DATE).split(', ')[1]
 
   return (
-    <article key={_id} className='mod-caja-nota lugares w-100-mobile'>
+    <article data-testid='container-item' key={_id} className='mod-caja-nota lugares w-100-mobile'>
       <section className='cont-figure'>
         <a className='figure'>
           <picture className='content-pic picture'>

@@ -7,7 +7,7 @@ export type TagType = {
 export type BasicType = {
     subtitle: string,
     type: string,
-    url: string
+    url?: string
 }
 
 export type NewType = {
@@ -34,7 +34,7 @@ export type TagParamType = {
 
 export type NewOfListProps = {
     news: NewType[],
-    onlySubtype: string
+    onlySubtype?: string
 }
 
 export type NewsItemProps = {

@@ -1,5 +1,5 @@
 import Breadcrumbs from '@/components/Breadcrumbs'
-import NewsGrid from '@/components/NewsGrid'
+import NewsSection from '@/components/NewsSection'
 import NewsOfList from '@/components/NewsOfList'
 import { getBreadcrumbsFromNews } from '@/helper'
 import { getNews } from '@/service'
@@ -10,10 +10,10 @@ export default async function Home (): Promise<JSX.Element> {
   return (
     <div id='wrap'>
       <main>
-        <NewsGrid>
+        <NewsSection>
           <Breadcrumbs tags={tags} />
           <NewsOfList news={articles} onlySubtype='7' />
-        </NewsGrid>
+        </NewsSection>
       </main>
     </div>
   )

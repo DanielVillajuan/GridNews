@@ -1,3 +1,3 @@
 export default function Loading (): JSX.Element {
-  return <span className='hlp-text-center hlp-bold'>Cargando...</span>
+  return <span data-testid='loading' className='hlp-text-center hlp-bold'>Cargando...</span>
 }
